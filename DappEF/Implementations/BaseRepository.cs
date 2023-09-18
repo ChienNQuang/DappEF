@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DappEF.Contracts;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace DappEF.Repositories;
+namespace DappEF.Implementations;
 
 public abstract class BaseRepository<TEntity> : DbSet<TEntity>, IBaseRepository<TEntity> where TEntity : class
 {

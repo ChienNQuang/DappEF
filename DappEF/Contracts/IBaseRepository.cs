@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace DappEF.Repositories;
+namespace DappEF.Contracts;
 
 public interface IBaseRepository<TEntity> where TEntity : class
 {
