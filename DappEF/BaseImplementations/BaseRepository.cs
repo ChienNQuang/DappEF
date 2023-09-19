@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace DappEF.Implementations;
+namespace DappEF.BaseImplementations;
 
 public abstract class BaseRepository<TEntity> : DbSet<TEntity>, IBaseRepository<TEntity> where TEntity : class
 {

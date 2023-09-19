@@ -2,7 +2,7 @@ using System.Data;
 using DappEF.Contracts;
 using Microsoft.EntityFrameworkCore;
 
-namespace DappEF.Implementations;
+namespace DappEF.BaseImplementations;
 
 public abstract class BaseUnitOfWork : IUnitOfWork
 {
