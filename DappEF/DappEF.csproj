@@ -4,6 +4,12 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <PackageId>DappEF</PackageId>
+        <Version>1.0.1</Version>
+        <Authors>ezarp</Authors>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <ItemGroup>
@@ -11,5 +17,15 @@
       <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.11" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
     </ItemGroup>
+    
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="" />
+    </ItemGroup>
 
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release Without Progress' Or '$(Configuration)' == 'Release With Progress' ">
+        <DefineConstants>$(DefineConstants);RELEASE;TRACE</DefineConstants>
+        <DebugSymbols>false</DebugSymbols>
+        <DebugType>portable</DebugType>
+        <Optimize>true</Optimize>
+    </PropertyGroup>
 </Project>
